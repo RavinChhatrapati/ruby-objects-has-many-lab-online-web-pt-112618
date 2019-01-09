@@ -23,17 +23,3 @@ else
 end
 end
 
-def self.find(name)     #class method detects instances from @@all class variable
-   self.all.detect { |artist| artist.name == name }
- end
-
- def self.create(name)   #class method creates & stores instances vs initializing
-   artist = Artist.new(name)
-   artist.save
-   artist
- end
-
- def print_songs #instance method iterates through @songs of an instance of Artist
-   self.songs.each {|song| song.name}
- end
- end
